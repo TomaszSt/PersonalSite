@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+{% load crispy_forms_tags %}
+
+{% block form %}
+      <div class="jumbotron" style="background-image: url('../static/img/people-coffee-tea-meeting2.jpg');background-size: cover;">
+        <h1>Tomasz Stanisławek</h1>
+            <p class="lead">Software Development, Project Management, Business Analysis, Process Optimization</p>
+            <p class="lead">Product Design & Development</p>
+            <p class="lead">StartUps, Small and Medium sized Companies</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Contact Now!</a></p>
+      </div>
+
+<form method="post" action="">{% csrf_token %}
+    {{ form|crispy }}
+    <div class="col-xs-12"></div>
+        <div class="col-xs-3"></div>
+        <p class="form-group"><input type="submit" class="btn btn-lg btn-primary col-xs-6"  value="Submit to Newsletter" style="display: block; margin-left: auto;margin-right: auto;"/></p>
+        <div class="col-xs-3"></div>
+    </div>
+
+</form>
+
+
+<div class="row marketing">
+        <div class="col-lg-6">
+          <h4><a href="/tweets">Career</a></h4>
+          <p>A Summary of professional career and Non-profit Involvment.</p>
+
+          <h4><a href="/tweets">Tweeter</a></h4>
+          <p>My Twitter Feed.</p>
+
+          <h4><a href="/tweets">Recomentations</a></h4>
+          <p>A few words from customers and co-workers.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4><a href="/tweets">Education</a></h4>
+          <p>A brief history of Personal Education.</p>
+          <h4><a href="/tweets">Certification</a></h4>
+          <p>Passed and In Progress certification </p>
+
+          <h4><a href="/tweets">Calendar</a></h4>
+          <p>Places where you can find me.</p>
+        </div>
+      </div>
+{% endblock %}
